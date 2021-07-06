@@ -36,7 +36,7 @@ public interface IMixinConfigurationBuilder {
      * @param envPhase Phase.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder targetEnvironment(MixinEnvironment.Phase envPhase);
+    IMixinConfigurationBuilder targetEnvironment(MixinEnvironment.Phase envPhase);
 
     /**
      * Specify refmap this mixin configuration will be pointing to.<br><br>
@@ -46,7 +46,7 @@ public interface IMixinConfigurationBuilder {
      * @param refmap Path to refmap.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder refmap(String refmap);
+    IMixinConfigurationBuilder refmap(String refmap);
 
     /**
      * Mark mixins of this configuration as mandatory. If Mixin itself
@@ -59,7 +59,7 @@ public interface IMixinConfigurationBuilder {
      * @param required True for mandatory configuration, false for non-mandatory.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder required(boolean required);
+    IMixinConfigurationBuilder required(boolean required);
 
     /**
      * Specify package in which your mixins reside. It is important to note
@@ -69,7 +69,7 @@ public interface IMixinConfigurationBuilder {
      * @param mixinPackage Package with your mixins.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder mixinPackage(String mixinPackage);
+    IMixinConfigurationBuilder mixinPackage(String mixinPackage);
 
     /**
      * Specify list of mixin classes that that will be applied as part of
@@ -106,7 +106,7 @@ public interface IMixinConfigurationBuilder {
      * @param mixinClasses List of common mixins for this configuration.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder commonMixins(String... mixinClasses);
+    IMixinConfigurationBuilder commonMixins(String... mixinClasses);
 
     /**
      * Specify list of mixin classes that that will be applied as part of
@@ -117,7 +117,7 @@ public interface IMixinConfigurationBuilder {
      * @return This builder instance.
      * @see #commonMixins(String...)
      */
-    public IMixinConfigurationBuilder clientMixins(String... mixinClasses);
+    IMixinConfigurationBuilder clientMixins(String... mixinClasses);
 
     /**
      * Specify list of mixin classes that that will be applied as part of
@@ -128,7 +128,7 @@ public interface IMixinConfigurationBuilder {
      * @return This builder instance.
      * @see #commonMixins(String...)
      */
-    public IMixinConfigurationBuilder serverMixins(String... mixinClasses);
+    IMixinConfigurationBuilder serverMixins(String... mixinClasses);
 
     /**
      * Specify priority of this mixin set relative to other configurations.<br><br>
@@ -138,7 +138,7 @@ public interface IMixinConfigurationBuilder {
      * @param priority Numeric priority.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder priority(int priority);
+    IMixinConfigurationBuilder priority(int priority);
 
     /**
      * Causes the mixin processor to overwrite the source file property in target
@@ -150,7 +150,7 @@ public interface IMixinConfigurationBuilder {
      * @param setOrNot True to overwrite, false to not.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder setSourceFile(boolean setOrNot);
+    IMixinConfigurationBuilder setSourceFile(boolean setOrNot);
 
     /**
      * Promotes all <code>DEBUG</code>-level log messages to <code>INFO</code> level
@@ -161,7 +161,7 @@ public interface IMixinConfigurationBuilder {
      * @param verbose True to promote, false to not.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder verbose(boolean verbose);
+    IMixinConfigurationBuilder verbose(boolean verbose);
 
     /**
      * Specify the name of an optional companion plugin class for the mixin configuration
@@ -173,7 +173,7 @@ public interface IMixinConfigurationBuilder {
      * {@link IMixinConfigPlugin}.
      * @return This builder instance.
      */
-    public IMixinConfigurationBuilder setConfigurationPlugin(String pluginClass);
+    IMixinConfigurationBuilder setConfigurationPlugin(String pluginClass);
 
     /**
      * Specify {@link ConfigurationType} for this configuration. Since runtime-built
@@ -186,7 +186,7 @@ public interface IMixinConfigurationBuilder {
      * @return
      * @see {@link ConfigurationType}
      */
-    public IMixinConfigurationBuilder configurationType(ConfigurationType type);
+    IMixinConfigurationBuilder configurationType(ConfigurationType type);
 
     /**
      * Finish building this configuration and get {@link IMixinConfiguration} instance
@@ -195,6 +195,6 @@ public interface IMixinConfigurationBuilder {
      *
      * @return {@link IMixinConfiguration} instance.
      */
-    public IMixinConfiguration build();
+    IMixinConfiguration build();
 
 }
